@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Character() {
+export default function CharacterCounter() {
   const [isCount, setIsCount] = useState(0);
   return (
     <>
