@@ -13,12 +13,13 @@ export default function DropDown() {
     "Saturday",
   ];
   return (
+    
     <div className="text-2xl flex flex-col justify-center items-center rounded-2xl bg-blue-500 w-1/2">
       <div className="flex ml-12">
         <input
           type="dropdown"
           value={selected}
-          className={`flex border-2 border-amber-100 px-6 py-2 justify-between rounded-2xl w-64
+          className={`mt-2 flex border-2 border-amber-100 px-6 py-2 justify-between rounded-2xl w-64
             ${selected !== "Select Any Day" ? "text-white" : "text-gray-500"}
             `}
         />
