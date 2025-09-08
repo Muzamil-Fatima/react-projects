@@ -42,4 +42,3 @@ export default function ProfileInfo({ user, editMode, handleSave }) {
     </div>
   );
 }
-export default
