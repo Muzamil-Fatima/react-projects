@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export default function Option2() {
   const [email, setEmail] = useState();
   function handleSubmit(e) {

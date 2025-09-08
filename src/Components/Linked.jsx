@@ -3,8 +3,71 @@ import { NavLink, Outlet } from "react-router-dom";
 
 export default function Navbar() {
   return (
+    //   <Route path="" element={<ProfileCard />} />
     <nav>
       <div>
+        <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap">
+          <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
+            20 mini function in React :
+          </h1>
+          <NavLink to="count-app" className="m-2">
+            <Button>CounterApp</Button>
+          </NavLink>
+          <NavLink to="inventory" className="m-2">
+            <Button>Inventory</Button>
+          </NavLink>
+          <NavLink to="banking" className="m-2">
+            <Button>Banking</Button>
+          </NavLink>
+          <NavLink to="star-rating" className="m-2">
+            <Button>StarRating</Button>
+          </NavLink>
+          <NavLink to="theme" className="m-2">
+            <Button>Theme</Button>
+          </NavLink>
+          <NavLink to="grade-book" className="m-2">
+            <Button>GradeBook</Button>
+          </NavLink>
+          <NavLink to="age" className="m-2">
+            <Button>Age</Button>
+          </NavLink>
+          <NavLink to="task" className="m-2">
+            <Button>Task</Button>
+          </NavLink>
+          <NavLink to="count-down-timer" className="m-2">
+            <Button>CountdownTimer</Button>
+          </NavLink>
+          <NavLink to="clock" className="m-2">
+            <Button>Clock</Button>
+          </NavLink>
+          <NavLink to="list-sort" className="m-2">
+            <Button>ListSort</Button>
+          </NavLink>
+          <NavLink to="user-management" className="m-2">
+            <Button>UserManagement</Button>
+          </NavLink>
+          <NavLink to="cart-counter" className="m-2">
+            <Button>CartCounter</Button>
+          </NavLink>
+          <NavLink to="form-handler" className="m-2">
+            <Button>FormHandler</Button>
+          </NavLink>
+          <NavLink to="profile-card" className="m-2">
+            <Button>Profile Card</Button>
+          </NavLink>
+          <NavLink to="greeting" className="m-2">
+            <Button>Greeting</Button>
+          </NavLink>
+          <NavLink to="password" className="m-2">
+            <Button>Password</Button>
+          </NavLink>
+          <NavLink to="paragraph-toggle" className="m-2">
+            <Button>Paragraph Toggle</Button>
+          </NavLink>
+          <NavLink to="to-do" className="m-2">
+            <Button>To Do List</Button>
+          </NavLink>
+        </div>
         <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap">
           <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
             20 mini function in React :

@@ -1,8 +1,6 @@
-export default function Model() {
+export default function Theme(){
     return(
         <>
-        
-
         
         </>
     )

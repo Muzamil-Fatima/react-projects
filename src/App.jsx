@@ -21,6 +21,24 @@ import Forms from "./17.ShowHideForm/Forms";
 import Preview from "./18.LivePreviewOfInput/Preview";
 import ValueIndicator from "./19.ValueIndicator/ValueIndicator";
 import RandomPasswordGenerator from "./20.RandomPasswordGenerator/RandomPasswordGenerator";
+import ToDo from "./21.TodoList/ToDo";
+import ParagraphToggle from "./23.ToggleParagraph/ParagraphToggle";
+import Greeting from "./25.GreetingApp/Greeting";
+import ProfileCard from "./26.ProfileCardComponent/ProfileCard";
+import FormHandler from "./27.FormHandlerApp/FormHandler";
+import CartCounter from "./28.ShoppingCartCounter/CartCounter";
+import ListSort from "./30.ListSort/ListSort";
+import Clock from "./31.LiveDigitalClock/Clock";
+import CountdownTimer from "./32.CountdownTimer/CountdownTimer";
+import Task from "./33.TaskManager/Task";
+import Age from "./34.AgeCalculator/Age";
+import GradeBook from "./35.StudentGradebook/Gradebook";
+import Theme from "./36.ThemeSwitcher/Theme";
+import StarRating from "./37.StarRatingSystem/StarRating";
+import Banking from "./38.BankingApp/Banking";
+import Inventory from "./39.InventorySystem/Inventory";
+import CounterApp from "./40.CounterApp/CounterApp";
+import UserManagement from "./29.UserManagementSystem/UserManagement";
 function App() {
   return (
     <div className="bg-black w-full max-h-screen h-screen overflow-y-auto p-10 text-white ">
@@ -46,6 +64,25 @@ function App() {
         <Route path="preview" element={<Preview />} />
         <Route path="value-indicator" element={<ValueIndicator />} />
         <Route path="random-password" element={<RandomPasswordGenerator />} />
+        {/* part 2 */}
+        <Route path="to-do" element={<ToDo />} />
+        <Route path="paragraph-toggle" element={<ParagraphToggle />} />
+        <Route path="greeting" element={<Greeting />} />
+        <Route path="profile-card" element={<ProfileCard />} />
+        <Route path="form-handler" element={<FormHandler />} />
+        <Route path="cart-counter" element={<CartCounter />} />
+        <Route path="user-management" element={<UserManagement />} />
+        <Route path="list-sort" element={<ListSort />} />
+        <Route path="clock" element={<Clock />} />
+        <Route path="count-down-timer" element={<CountdownTimer />} />
+        <Route path="task" element={<Task />} />
+        <Route path="age" element={<Age />} />
+        <Route path="grade-book" element={<GradeBook />} />
+        <Route path="theme" element={<Theme />} />
+        <Route path="star-rating" element={<StarRating />} />
+        <Route path="banking" element={<Banking />} />
+        <Route path="inventory" element={<Inventory />} />
+        <Route path="count-app" element={<CounterApp />} />
       </Routes>
     </div>
   );
