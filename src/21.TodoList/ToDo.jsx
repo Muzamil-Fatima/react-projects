@@ -4,7 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 export default function ToDo() {
   const [list, setList] = useState([]);
   const [task, setTask] = useState("");
-
   const handleList = () => {
     if (task.trim() !== "") {
       setList([{ id: Date.now(), text: task, completed: false }, ...list]);
@@ -14,7 +13,6 @@ export default function ToDo() {
       toast.error("Please Add Your Task!");
     }
   };
-
   const handleTaskComplete = (id) => {
     const updateList = list.map((todo) =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
@@ -29,7 +27,6 @@ export default function ToDo() {
         <div className="flex gap-3 mb-5 w-full justify-center pt-10">
           <input
             value={task}
-            // its take live value 
             onChange={(e) => setTask(e.target.value)}
             type="text"
             className="border-2 px-2 py-3 m-3 rounded-xl w-3xs"
