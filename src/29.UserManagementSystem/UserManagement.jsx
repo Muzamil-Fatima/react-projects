@@ -2,102 +2,107 @@ import { useState } from "react";
 
 export default function UserManagement() {
   const [user, setUser] = useState([
-    { id: 1, name: "Ali", email: "ali@gmail.com" },
-    { id: 2, name: "Akbar", email: "akbar@gmail.com" },
-    { id: 3, name: "Noor", email: "noor@gmail.com" },
-    { id: 4, name: "Fatima", email: "fatima@gmail.com" },
-    { id: 5, name: "Muzamil", email: "muzamil@gmail.com" },
+    { name: "Muzmail", email: "muzamil@gmail.com" },
+    { name: "Ali", email: "ali@gmail.com" },
+    { name: "Ahmad", email: "ahmad@gmail.com" },
+    { name: "Ayesha", email: "ayesha@gmail.com" },
+    { name: "Fatima", email: "fatima@gmail.com" },
   ]);
   const [form, setForm] = useState({ name: "", email: "" });
-  const [editId, setEditId] = useState(null);
-  const [search, setSearch] = useState("");
-  // handle form input
+  const [edit, setEdit] = useState(null);
+  const handleEdit = (index) => {
+    setForm(user[index]);
+    setEdit(index);
+  };
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  // add or update user
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.name || !form.email) return;
-    if (editId) {
-      setUser(
-        user.map((u) =>
-          u.id === editId ? { ...u, name: form.name, email: form.email } : u
-        )
-      );
-      setEditId(null);
-    } else {
-      setUser([
-        ...user,
-        { id: Date.now(), name: form.name, email: form.email },
-      ]);
+    if (form.name && form.email) {
+      if (edit !== null) {
+        const updateUsers = [...user];
+        updateUsers[edit] = form;
+        setUser(updateUsers);
+        setEdit(null);
+      } else {
+        setUser([...user, form]);
+      }
+      setForm({ name: "", email: "" });
     }
-    setForm({ name: "", email: "" });
   };
-  // delete user
-  const handleDelete = (id) => {
-    setUser(user.filter((u) => u.id !== id));
+  const handleDelete = (index) => {
+    const updateUsers = user.filter((_, i) => i !== index);
+    setUser(updateUsers);
   };
-  // edit user
-  const handleEdit = (user) => {
-    setForm({ name: user.name, email: user.email });
-    setEditId(user.id);
-  };
-  // search filter
-  const filteredUsers = user.filter(
-    (u) =>
-      u.name.toLowerCase().includes(search.toLowerCase()) ||
-      u.email.toLowerCase().includes(search.toLowerCase())
-  );
   return (
     <>
-      <div>
-        <h2>User Management</h2>
-        {/* search user input box */}
+      <h2 className="text-2xl font-extrabold m-10 text-center">
+        User Management System
+      </h2>
+      <div className="flex justify-center">
         <input
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
+          placeholder="Search User here......."
           type="text"
-          placeholder="Search User here........"
-          className="border-2 px-4 py-2 rounded-xl"
+          className="border-2 border-amber-50 px-6 py-3 rounded-2xl"
         />
-        <form action="" onSubmit={handleSubmit}>
-          <input
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            type="text"
-            placeholder="Enter User Name.."
-            className="border-2 px-4 py-2 rounded-xl"
-          />{" "}
-          <input
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            type="email"
-            placeholder="Enter User Email"
-            className="border-2 px-4 py-2 rounded-xl"
-          />
-          <button className="bg-blue-500 px-3 py-3">
-            {editId ? "Update User" : "Add User"}
-          </button>
-        </form>
-        {/* User List */}
-        <ul>
-          {filteredUsers.map((u) => (
-            <li key={u.id}>
-              <div>
-                <p>{u.name}</p>
-                <p>{u.email}</p>
-              </div>
-              <div>
-                <button onClick={() => handleEdit(u)}>Edit</button>
-                <button onClick={() => handleDelete(u.id)}>Delete</button>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <button className="bg-blue-500 px-2 py-3 rounded-2xl ml-4">
+          Search
+        </button>
       </div>
+      <form
+        onSubmit={handleSubmit}
+        className="border-2 p-10 flex flex-col rounded-2xl mt-4"
+      >
+        <input
+          value={form.name}
+          name="name"
+          onChange={handleChange}
+          placeholder="Enter Name"
+          type="text"
+          className="border-2 border-amber-50 px-6 py-3 rounded-2xl mb-3"
+        />
+        <input
+          value={form.email}
+          name="email"
+          onChange={handleChange}
+          placeholder="Enter Email"
+          type="email"
+          className="border-2 border-amber-50 px-6 py-3 rounded-2xl mb-3"
+        />
+        <div className="flex justify-center">
+          <button className="bg-blue-500 py-3 rounded-2xl ml-3 w-3xs">
+            {edit !== null ? "Update" : "Add"}
+          </button>
+        </div>
+      </form>
+      {/* user list */}
+      {user.map((u, index) => (
+        <ul key={index}>
+          <li className="flex justify-between mt-2">
+            <div className="grid grid-cols-2 gap-10 w-80">
+              <p>{u.name}</p>
+              <p>{u.email}</p>
+            </div>
+            <div className="space-x-2.5">
+              <button
+                onClick={() => handleEdit(index)}
+                className="bg-blue-500 px-2 py-2 rounded-2xl"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => handleDelete(index)}
+                className="bg-blue-500 px-2 py-2 rounded-2xl"
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+        </ul>
+      ))}
     </>
   );
 }
