@@ -10,6 +10,7 @@ export default function UserManagement() {
   ]);
   const [form, setForm] = useState({ name: "", email: "" });
   const [edit, setEdit] = useState(null);
+  const [search, setSearch] = useState("");
   const handleEdit = (index) => {
     setForm(user[index]);
     setEdit(index);
@@ -37,6 +38,11 @@ export default function UserManagement() {
     const updateUsers = user.filter((_, i) => i !== index);
     setUser(updateUsers);
   };
+  const filterUser = user.filter(
+    (u) =>
+      u.name.toLowerCase().includes(search.toLowerCase()) ||
+      u.email.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <>
       <h2 className="text-2xl font-extrabold m-10 text-center">
@@ -44,6 +50,8 @@ export default function UserManagement() {
       </h2>
       <div className="flex justify-center">
         <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           placeholder="Search User here......."
           type="text"
           className="border-2 border-amber-50 px-6 py-3 rounded-2xl"
@@ -79,7 +87,7 @@ export default function UserManagement() {
         </div>
       </form>
       {/* user list */}
-      {user.map((u, index) => (
+      {filterUser.map((u, index) => (
         <ul key={index}>
           <li className="flex justify-between mt-2">
             <div className="grid grid-cols-2 gap-10 w-80">
