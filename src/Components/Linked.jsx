@@ -68,7 +68,7 @@ export default function Navbar() {
             <Button>To Do List</Button>
           </NavLink>
         </div>
-        <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap">
+        <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap mt-12">
           <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
             20 mini function in React :
           </h1>
