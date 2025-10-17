@@ -6,7 +6,7 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-100 w-3/5 mx-auto rounded-3xl p-8 shadow-xl mt-10">
+    <div className="flex flex-col justify-center items-center bg-gray-100 w-1/2 mx-auto rounded-3xl p-8 shadow-xl mt-10">
       <h1 className="text-3xl font-extrabold text-fuchsia-700 bg-amber-300 p-4 rounded-xl shadow-md mb-8">
         Button Click Counter
       </h1>

@@ -44,7 +44,7 @@ export default function UserManagement() {
       u.email.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    <>
+    <div className="w-1/2 flex justify-center flex-col m-auto" >
       <h2 className="text-2xl font-extrabold m-10 text-center">
         User Management System
       </h2>
@@ -111,6 +111,6 @@ export default function UserManagement() {
           </li>
         </ul>
       ))}
-    </>
+    </div>
   );
 }
