@@ -33,15 +33,16 @@ export default function CountdownTimer() {
 
   return (
     <div
-      style={{
-        padding: "20px",
-        maxWidth: "400px",
-        margin: "auto",
-        textAlign: "center",
-        border: "1px solid #ccc",
-        borderRadius: "10px",
-        background : "gray",
-      }}
+    className="p-2.5 border-red-400 text-center bg-gray-400 m-auto w-1/2 rounded-2xl"
+      // style={{
+      //   padding: "20px",
+      //   maxWidth: "400px",
+      //   margin: "auto",
+      //   textAlign: "center",
+      //   border: "1px solid #ccc",
+      //   borderRadius: "10px",
+      //   background : "gray",
+      // }}
     >
       <h2>⏳ Countdown Timer</h2>
 

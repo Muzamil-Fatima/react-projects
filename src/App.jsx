@@ -32,13 +32,14 @@ import Clock from "./31.LiveDigitalClock/Clock";
 import CountdownTimer from "./32.CountdownTimer/CountdownTimer";
 import Task from "./33.TaskManager/Task";
 import Age from "./34.AgeCalculator/Age";
-import GradeBook from "./35.StudentGradebook/Gradebook";
+import GradeBook from "./35.StudentGradebook/GradeBook";
 import Theme from "./36.ThemeSwitcher/Theme";
 import StarRating from "./37.StarRatingSystem/StarRating";
 import Banking from "./38.BankingApp/Banking";
 import Inventory from "./39.InventorySystem/Inventory";
 import CounterApp from "./40.CounterApp/CounterApp";
 import UserManagement from "./29.UserManagementSystem/UserManagement";
+import Demo  from "./70.Demo/Demo";
 function App() {
   return (
     <div className="bg-black w-full max-h-screen h-screen overflow-y-auto p-10 text-white ">
@@ -83,6 +84,7 @@ function App() {
         <Route path="banking" element={<Banking />} />
         <Route path="inventory" element={<Inventory />} />
         <Route path="count-app" element={<CounterApp />} />
+        <Route path="demo" element={<Demo />} />
       </Routes>
     </div>
   );
