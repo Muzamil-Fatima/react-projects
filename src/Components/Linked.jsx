@@ -10,9 +10,9 @@ export default function Navbar() {
           <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
             20 mini function in React :
           </h1>
-          <NavLink to="demo" className="m-2">
-            <Button>Demo</Button>
-          </NavLink>
+         <NavLink to="alert-box" className="m-2">
+          <Button >Custom Alert Box</Button>
+         </NavLink>
           <NavLink to="count-app" className="m-2">
             <Button>CounterApp</Button>
           </NavLink>

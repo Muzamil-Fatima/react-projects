@@ -39,7 +39,7 @@ import Banking from "./38.BankingApp/Banking";
 import Inventory from "./39.InventorySystem/Inventory";
 import CounterApp from "./40.CounterApp/CounterApp";
 import UserManagement from "./29.UserManagementSystem/UserManagement";
-import Demo  from "./70.Demo/Demo";
+import AlertBox from "./43.CustomAlertBox/AlertBox";
 function App() {
   return (
     <div className="bg-black w-full max-h-screen h-screen overflow-y-auto p-10 text-white ">
@@ -84,7 +84,7 @@ function App() {
         <Route path="banking" element={<Banking />} />
         <Route path="inventory" element={<Inventory />} />
         <Route path="count-app" element={<CounterApp />} />
-        <Route path="demo" element={<Demo />} />
+        <Route path="alert-box" element={<AlertBox />} />
       </Routes>
     </div>
   );
