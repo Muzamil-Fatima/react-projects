@@ -6,13 +6,39 @@ export default function Navbar() {
     //   <Route path="" element={<ProfileCard />} />
     <nav>
       <div>
+        <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap mb-10">
+          <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
+            7 mini Project React :
+          </h1>
+          <NavLink to="github" className="m-2">
+            <Button>GitHub Profile View</Button>
+          </NavLink>
+          <NavLink to="recipe" className="m-2">
+            <Button>Recipe App</Button>
+          </NavLink>
+          <NavLink to="weather" className="m-2">
+            <Button>Weather App</Button>
+          </NavLink>
+          <NavLink to="country" className="m-2">
+            <Button>Country Info Finder</Button>
+          </NavLink>
+          <NavLink to="news-fetcher" className="m-2">
+            <Button>News Fetcher</Button>
+          </NavLink>
+          <NavLink to="currency" className="m-2">
+            <Button>Currency Converter</Button>
+          </NavLink>
+          <NavLink to="todo-fake-api" className="m-2">
+            <Button>Todo-Fake API</Button>
+          </NavLink>
+        </div>
         <div className="border-8 border-amber-600 p-12 bg-pink-200 flex flex-wrap">
           <h1 className="text-4xl font-bold text-purple-700 w-full mb-3">
             20 mini function in React :
           </h1>
-         <NavLink to="alert-box" className="m-2">
-          <Button >Custom Alert Box</Button>
-         </NavLink>
+          <NavLink to="alert-box" className="m-2">
+            <Button>Custom Alert Box</Button>
+          </NavLink>
           <NavLink to="count-app" className="m-2">
             <Button>CounterApp</Button>
           </NavLink>
