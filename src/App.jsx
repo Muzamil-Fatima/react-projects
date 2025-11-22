@@ -40,6 +40,13 @@ import Inventory from "./39.InventorySystem/Inventory";
 import CounterApp from "./40.CounterApp/CounterApp";
 import UserManagement from "./29.UserManagementSystem/UserManagement";
 import AlertBox from "./43.CustomAlertBox/AlertBox";
+import Github from "./44.GitHubProfileViewer/Github";
+import Recipe from "./45.RecipeSearchApp/Recipe";
+import Weather from "./46.WeatherApp/Weather";
+import Country from "./47.CountryInfoFinder/Country";
+import News from "./48.NewsFetcher/News";
+import Currency from "./49.CurrencyConverter/Currency";
+import ToDoApp from "./50.TodoAppFakeAPI/ToDoApp";
 function App() {
   return (
     <div className="bg-black w-full max-h-screen h-screen overflow-y-auto p-10 text-white ">
@@ -85,6 +92,14 @@ function App() {
         <Route path="inventory" element={<Inventory />} />
         <Route path="count-app" element={<CounterApp />} />
         <Route path="alert-box" element={<AlertBox />} />
+        {/* part 3 */}
+        <Route path="alert-box" element={<Github />} />
+        <Route path="alert-box" element={<Recipe />} />
+        <Route path="alert-box" element={<Weather />} />
+        <Route path="alert-box" element={<Country />} />
+        <Route path="alert-box" element={<News />} />
+        <Route path="alert-box" element={<Currency />} />
+        <Route path="alert-box" element={<ToDoApp />} />
       </Routes>
     </div>
   );
