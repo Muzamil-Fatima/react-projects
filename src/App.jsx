@@ -93,16 +93,15 @@ function App() {
         <Route path="count-app" element={<CounterApp />} />
         <Route path="alert-box" element={<AlertBox />} />
         {/* part 3 */}
-        <Route path="alert-box" element={<Github />} />
-        <Route path="alert-box" element={<Recipe />} />
-        <Route path="alert-box" element={<Weather />} />
-        <Route path="alert-box" element={<Country />} />
-        <Route path="alert-box" element={<News />} />
-        <Route path="alert-box" element={<Currency />} />
-        <Route path="alert-box" element={<ToDoApp />} />
+        <Route path="github" element={<Github />} />
+        <Route path="recipe" element={<Recipe />} />
+        <Route path="weather" element={<Weather />} />
+        <Route path="country" element={<Country />} />
+        <Route path="news-fetcher" element={<News />} />
+        <Route path="currency" element={<Currency />} />
+        <Route path="todo-fake-api" element={<ToDoApp />} />
       </Routes>
     </div>
   );
 }
-
 export default App;
