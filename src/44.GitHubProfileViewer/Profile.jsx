@@ -4,7 +4,6 @@ const Profile = ({ profile }) => {
   return (
     <div className="flex justify-center items-center mt-10 text-white">
       <div className="p-6 shadow-lg rounded-xl border-2 border-amber-950 max-w-lg w-full space-y-6 ">
-
         {/* Centered Image */}
         <div className="flex justify-center">
           <img
@@ -15,31 +14,40 @@ const Profile = ({ profile }) => {
         </div>
 
         {/* Info */}
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold hover:text-amber-700">
+        <div className="space-y-2 font-medium text-lg">
+          <h2 className="text-4xl font-bold hover:text-amber-700 text-center">
             {profile?.name || "No Name"}
           </h2>
 
-          <p className="hover:text-amber-600">@{profile?.login}</p>
+          <p className="hover:text-amber-600 text-center">@{profile?.login}</p>
 
           {profile?.bio && (
-            <p className="hover:text-amber-500">{profile?.bio}</p>
+            <p className="hover:text-amber-500 text-center">{profile?.bio}</p>
           )}
 
           {profile?.location && (
-            <p className="hover:text-amber-500">Location: {profile?.location}</p>
+            <p className="hover:text-amber-500 text-center">
+              <span className="text-amber-600">Location: </span>{" "}
+              {profile?.location}
+            </p>
           )}
 
-          <p className="hover:text-amber-400">
-            Followers: {profile?.followers} | Following: {profile?.following}
+          <p className="hover:text-amber-400 text-center">
+            <span className="text-amber-600">Followers:</span>{" "}
+            {profile?.followers}
+          </p>
+          <p className="hover:text-amber-400 text-center">
+            <span className="text-amber-600">Following: </span>{" "}
+            {profile?.following}
+          </p>
+          <p className="hover:text-amber-500 text-center">
+            <span className="text-amber-600"> Public Repos:</span>{" "}
+            {profile?.public_repos}
           </p>
 
-          <p className="hover:text-amber-500">
-            Public Repos: {profile?.public_repos}
-          </p>
-
-          <p className="hover:text-amber-500">
-            Joined: {new Date(profile?.created_at).toLocaleDateString()}
+          <p className="hover:text-amber-500 text-center">
+            <span className="text-amber-600">Joined:</span>{" "}
+            {new Date(profile?.created_at).toLocaleDateString()}
           </p>
         </div>
 
@@ -53,7 +61,6 @@ const Profile = ({ profile }) => {
             View on GitHub
           </a>
         </div>
-
       </div>
     </div>
   );
