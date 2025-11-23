@@ -9,7 +9,7 @@ All projects are connected through React Router, making it easy to explore and t
 
 ## **🚀 Features**
 
-* Organized **50+ mini React apps**
+* Organized **45+ mini React apps**
 * Covers **beginner → advanced** concepts
 * Includes **State Management**, **Events**, **Hooks**, **Forms**, **Conditional Rendering**, **API Integration**, etc.
 * Built with:
