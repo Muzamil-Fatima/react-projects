@@ -5,6 +5,11 @@ const SearchBox = ({ username, setUsername, fetchProfile }) => {
     <div className="">
       <div className="justify-center flex items-center flex-row">
         <input
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              fetchProfile();
+            }
+          }}
           onChange={(e) => setUsername(e.target.value)}
           value={username}
           type="text"
